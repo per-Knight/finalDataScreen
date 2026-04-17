@@ -1,0 +1,66 @@
+:root {
+  font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #c6ddff;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(30, 116, 255, 0.26), transparent 42%),
+    radial-gradient(circle at 80% 0%, rgba(68, 255, 220, 0.16), transparent 38%),
+    #07142f;
+  min-height: 100vh;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+.screen-page {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.screen-main {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 12px;
+  min-height: calc(100vh - 155px);
+}
+
+.column-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.panel {
+  border: 1px solid rgba(72, 139, 231, 0.42);
+  border-radius: 14px;
+  background: linear-gradient(145deg, rgba(15, 38, 90, 0.58), rgba(9, 24, 56, 0.74));
+  box-shadow:
+    inset 0 0 18px rgba(84, 168, 255, 0.14),
+    0 0 18px rgba(15, 94, 197, 0.25);
+  backdrop-filter: blur(6px);
+}
+
+input[type='range'] {
+  accent-color: #41d9ff;
+}
+
+@media (max-width: 1480px) {
+  .screen-main {
+    grid-template-columns: 1fr;
+  }
+}
